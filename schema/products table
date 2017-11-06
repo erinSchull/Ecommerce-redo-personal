@@ -1,0 +1,46 @@
+CREATE TABLE products(
+    id SERIAL,
+    productid INT PRIMARY KEY,
+    title VARCHAR(50),
+    img TEXT,
+    price INT 
+)
+
+//dummy data
+INSERT INTO products(productid, title, img, price)
+VALUES(1, 'thing1', 'https://goo.gl/images/rcIlng', 463);
+
+
+INSERT INTO products(productid, title, img, price)
+VALUES(3, 'carrot cake', 'https://images.unsplash.com/photo-1487124504955-e42a39e11aaf?auto=format&fit=crop&w=3112&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D', 999);
+INSERT INTO products(productid, title, img, price)
+VALUES(4, 'artisinal coffee', 'https://images.unsplash.com/photo-1499961524705-bfd103e65a6d?auto=format&fit=crop&w=2100&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D', 567);
+INSERT INTO products(productid, title, img, price)
+VALUES(5, 'happiness', 'https://images.pexels.com/photos/9488/nature-flowers-pattern-circle.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb', 123);
+INSERT INTO products(productid, title, img, price)
+VALUES(6, 'sadness', 'https://images.pexels.com/photos/459451/pexels-photo-459451.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb', 321);
+INSERT INTO products(productid, title, img, price)
+VALUES(7, 'stuff', 'https://images.pexels.com/photos/459799/pexels-photo-459799.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb', 456);
+INSERT INTO products(productid, title, img, price)
+VALUES(8, 'more stuff', 'https://i.ytimg.com/vi/oeag10eEgZI/hqdefault.jpg', 777);
+INSERT INTO products(productid, title, img, price)
+VALUES(9, 'evil', 'https://vignette.wikia.nocookie.net/casper/images/2/25/Hero_art2.jpg/revision/latest?cb=20131106035251', 666);
+INSERT INTO products(productid, title, img, price)
+VALUES(10, 'all the stuff', 'https://az616578.vo.msecnd.net/files/2016/11/17/636149977030665003-228111708_ODYSSEY.jpg', 4523);
+
+
+UPDATE products
+SET img = 'http://images.clipartpanda.com/dr-seuss-coloring-pages-thing-1-and-thing-2-UEcPP9gpg8btrld88dUjZzFk.jpeg'
+WHERE productid = 1
+
+INSERT INTO products(productid, title, img, price)
+VALUES(2, 'thing2', 'https://goo.gl/images/UiqVbU', 845);
+
+UPDATE products
+SET img = 'https://i.pinimg.com/236x/fb/49/94/fb4994c33357046763b3cf0b03aa6d26--diy-kids-costumes-girl-halloween-costumes.jpg'
+WHERE productid = 2
+//
+
+
+SELECT * FROM products
+WHERE productid = 2

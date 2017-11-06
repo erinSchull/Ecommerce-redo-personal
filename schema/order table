@@ -1,0 +1,15 @@
+join order to products
+
+CREATE TABLE orders(
+    id SERIAL PRIMARY KEY,
+    productsid INT REFERENCES products(productid),
+    orderid INT
+)
+
+
+INNER JOIN schema:
+
+SELECT *
+FROM products
+INNER JOIN orders
+ON products.productid = orders.productsid;

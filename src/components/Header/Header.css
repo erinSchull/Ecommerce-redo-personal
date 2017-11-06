@@ -1,0 +1,23 @@
+.header{
+    border: solid;
+    border-color: plum;
+    border-left-width : 8px;
+    border-right-width : 8px;
+    border-top-width : 12px;
+    border-bottom-width : 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Links{
+    color: #FFFFFF;
+    font-size: 19px;
+    text-decoration: none;
+    background-color: rgba(0, 0, 128, 0.78);
+    align-items: center;
+    width: 100px;
+    border: solid;
+    border-color: #05BDBD;
+    border-radius: 12px;
+}

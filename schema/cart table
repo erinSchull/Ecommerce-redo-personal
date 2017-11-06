@@ -1,0 +1,39 @@
+CREATE TABLE cart(
+    id SERIAL PRIMARY KEY,
+    productsid INT REFERENCES products(productid),
+    cartid INT
+)
+
+SELECT *
+FROM products
+INNER JOIN cart
+ON products.productid = cart.productsid;
+
+INSERT INTO cart(productsid, cartid)
+VALUES(8, 1);
+
+join cart to products
+
+DELETE FROM cart 
+WHERE cartid = null
+
+
+JOINING CART AND PRODUCTS FOR ADDING TO CART:
+UPDATE cart
+SET cart.productid = products.productid
+FROM cart
+INNER JOIN products
+ON cart.productsid = products.productid
+WHERE productid = $1
+
+or ? 
+INSERT INTO cart
+SELECT productid
+FROM products 
+WHERE productid = $1
+
+or ? ****
+INSERT INTO cart(productsid, cartid)
+SELECT productid
+FROM products 
+WHERE productid = 1 cartid = 1
