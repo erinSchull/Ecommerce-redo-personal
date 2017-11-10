@@ -7,9 +7,9 @@ class Products extends Component {
     componentDidMount() {
         this.props.readProducts();
     }
-    addToCart(product){
-        this.props.addToCart(product);
-    }
+    // addToCart(product){
+    //     this.props.addToCart(product);
+    // }
 
     render() {
         
@@ -28,7 +28,7 @@ class Products extends Component {
                                 <p className="price">Product Price: ${products.price}</p>
                                 
 
-                                <button className="prod-button" onClick={() => this.addToCart(products)}>Add this to my cart!</button>
+                                <button className="prod-button" onClick={() => this.props.addToCart(products.productid)}>Add this to my cart!</button>
 
                             </div>
                         )

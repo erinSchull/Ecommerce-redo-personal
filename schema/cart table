@@ -32,8 +32,12 @@ SELECT productid
 FROM products 
 WHERE productid = $1
 
-or ? ****
-INSERT INTO cart(productsid, cartid)
+INSERT INTO cart(productsid)
 SELECT productid
 FROM products 
-WHERE productid = 1 cartid = 1
+WHERE productid = 3
+
+
+good for deleting off redux, not db
+const cartMinusOne = state.cart.slice();
+        cartMinusOne.splice(action.payload, 1);

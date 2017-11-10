@@ -12,6 +12,9 @@ const ADD_REDUX_PRODUCT = 'ADD_REDUX_PRODUCT';
 const ADD_TO_CART = 'ADD_TO_CART';
 const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
 const GET_CART_PRODUCTS = 'GET_CART_PRODUCTS';
+const CREATE_ORDER = 'CREATE_ORDER';
+const ALL_ORDERS = 'ALL_ORDERS';
+
 
 export function getProduct(productid) {
     const product = axios.get(`/api/product/${productid}`)
@@ -27,7 +30,7 @@ export function getProduct(productid) {
 };
 
 export function addProductsOnRedux(){
-    const products = axios.get('/api/product')
+    const products = axios.post('/api/product')
     .then(res => {
         return res.data
     })
@@ -50,9 +53,9 @@ export function readProducts(){
 };
 
 export function addToCart(productid){
-    const cartProd = axios.put(`/api/cart/${productid }`)
+    const cartProd = axios.post(`/api/cart/${productid }`)
     .then(res => {
-        console.log('check if we get here');
+        console.log('check if we get here cart');
         return res.data
     })
     return{
@@ -61,19 +64,8 @@ export function addToCart(productid){
     }
 };
 
-export function removeFromCart(productid){
-    const cartProd = axios.delete(`/api/cart/${productid}`)
-    .then(res => {
-        return res.data
-    })
-    return{
-        type: REMOVE_FROM_CART,
-        payload: cartProd
-    }
-};
-
-export function readCartProducts(productid){
-    const cartProd = axios.get(`/api/cart/${productid}`)
+export function readCartProducts(productsid){
+    const cartProd = axios.get(`/api/cart/${productsid}`)
     .then(res => {
         return res.data
     })
@@ -82,6 +74,41 @@ export function readCartProducts(productid){
         payload: cartProd
     }
 };
+
+export function removeFromCart(productsid){
+    const cartStuff = axios.delete(`/api/cart/${productsid}`)
+    .then(res => {
+        return res.data
+    })
+    return{
+        type: REMOVE_FROM_CART,
+        payload: cartStuff
+    }
+};
+
+export function createOrder(){
+    const orderProd = axios.post('/api/orders')
+    .then(res => {
+        return res.data
+    })
+    console.log('testing order submit');
+    return{
+        type: CREATE_ORDER,
+        payload: orderProd
+    }
+};
+
+export function readOrders(){
+    const orders = axios.get('/api/orders')
+    .then(res => {
+        return res.data
+    })
+    return{
+        type: ALL_ORDERS,
+        payload: orders
+    }
+};
+
 
 
 export default function reducer( state = initialState, action){
@@ -97,10 +124,14 @@ export default function reducer( state = initialState, action){
         cartPlusOne.push(action.payload);
         return Object.assign({}, state, {cart: cartPlusOne});
         case REMOVE_FROM_CART + '_FULFILLED':
-        const cartMinusOne = state.cart.slice();
-        cartMinusOne.splice(action.payload, 1);
-        return Object.assign({}, state, {cart: cartMinusOne});
+        return Object.assign({}, state, {cart: action.payload});
         case GET_CART_PRODUCTS + '_FULFILLED':
+        return Object.assign({}, state, {cart: action.payload});
+        case CREATE_ORDER + '_FULFILLED':
+        const orderPlusOne = state.cart.slice();
+        orderPlusOne.push(action.payload)
+        return Object.assign({}, state, {orders: orderPlusOne});
+        case ALL_ORDERS + '_FULFILLED':
         return Object.assign({}, state, {cart: action.payload});
         default: 
         return state

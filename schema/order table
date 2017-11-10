@@ -3,7 +3,7 @@ join order to products
 CREATE TABLE orders(
     id SERIAL PRIMARY KEY,
     productsid INT REFERENCES products(productid),
-    orderid INT
+    orderid SERIAL
 )
 
 
@@ -13,3 +13,14 @@ SELECT *
 FROM products
 INNER JOIN orders
 ON products.productid = orders.productsid;
+
+INSERT INTO orders(productsid)
+SELECT productid
+FROM products 
+WHERE productid = $1;
+
+endpoints:
+
+required: create, read
+
+bonus: delete
