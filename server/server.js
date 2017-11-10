@@ -33,6 +33,7 @@ app.get('/api/products', prodCtrl.readProducts);
 app.get('/api/cart/:productid', cartCtrl.getProductsOnCart);
 app.post('/api/cart/:productsid',cartCtrl.addToCart);
 app.delete('/api/cart/:productsid',cartCtrl.removeFromCart);
+app.put('/api/cart', cartCtrl.clearCart);
 
 //order endpoints
 app.get('/api/orders', orderCtrl.getProductsOnOrders);

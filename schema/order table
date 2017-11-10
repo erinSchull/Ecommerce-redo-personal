@@ -24,3 +24,8 @@ endpoints:
 required: create, read
 
 bonus: delete
+
+ALTER TABLE orders 
+ALTER orderid
+SET DATATYPE  SERIAL --> data serial does not exist, dropped table...
+and recreated with datatype serial, altered syntax on lines 3-7

@@ -14,7 +14,9 @@ const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
 const GET_CART_PRODUCTS = 'GET_CART_PRODUCTS';
 const CREATE_ORDER = 'CREATE_ORDER';
 const ALL_ORDERS = 'ALL_ORDERS';
+const CLEAR_CART = 'CLEAR_CART';
 
+//action creators to be called in reducer function
 
 export function getProduct(productid) {
     const product = axios.get(`/api/product/${productid}`)
@@ -86,6 +88,17 @@ export function removeFromCart(productsid){
     }
 };
 
+export function clearCart(){
+    const cartCont = axios.put('/api/cart')
+    .then(res => {
+        return res.data
+    })
+    return{
+        type: CLEAR_CART,
+        payload: cartCont
+    }
+}
+
 export function createOrder(){
     const orderProd = axios.post('/api/orders')
     .then(res => {
@@ -124,6 +137,8 @@ export default function reducer( state = initialState, action){
         cartPlusOne.push(action.payload);
         return Object.assign({}, state, {cart: cartPlusOne});
         case REMOVE_FROM_CART + '_FULFILLED':
+        return Object.assign({}, state, {cart: action.payload});
+        case CLEAR_CART + '_FULFILLED':
         return Object.assign({}, state, {cart: action.payload});
         case GET_CART_PRODUCTS + '_FULFILLED':
         return Object.assign({}, state, {cart: action.payload});

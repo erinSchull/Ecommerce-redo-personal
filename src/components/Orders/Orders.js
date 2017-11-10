@@ -12,12 +12,12 @@ class Orders extends Component {
         console.log('orders', this.props.orders)
         return (
             <div className="orders-app" >
-                <h3> Orders shown here</h3>
+                <h2> Orders shown here</h2>
 
                 <div>
                     {this.props.orders.map((products, i) => {
 
-                        return (
+                        return ( products.productsid ? 
                             <div key={i} className="product">
 
                                 <img src={products.img} alt={products.title} className='product-image' />
@@ -26,7 +26,7 @@ class Orders extends Component {
                                 <p className="price">Product Price: ${products.price}</p>
 
                             </div>
-                        )
+                        : null )
                     })}
                 </div>
             </div>

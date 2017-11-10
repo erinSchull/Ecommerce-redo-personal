@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import './Cart.css';
 import { connect } from 'react-redux';
-import { readCartProducts, removeFromCart, createOrder } from './../../ducks/reducer';
+import { readCartProducts, removeFromCart, createOrder, clearCart } from './../../ducks/reducer';
 
 class Cart extends Component {
     componentDidMount() {
@@ -10,10 +10,15 @@ class Cart extends Component {
     // componentWillReceiveProps(){
     //     this.props.removeFromCart();
     // }
-
+    
+    onClick() {
+        this.props.createOrder(this.props.order.productsid);
+        this.props.clearCart();
+    }
+    
     render() {
-        console.log('cart', this.props.cart); //leave this until finished
         const order = this.props.orders;
+        console.log('cart', this.props.cart); //leave this until finished
         return (
             <div className="cart-app" >
                 <h3>Let's see what you want... </h3>
@@ -30,7 +35,7 @@ class Cart extends Component {
                                 <p className="price">Product Price: ${products.price}</p>
 
 
-                                <button className="prod-button" onClick={() => this.props.removeFromCart(products.productsid)} >I changed my mind</button>
+                                <button className="prod-button" onClick={this.onClick} >I changed my mind</button>
                             </div>
 
                         )
@@ -55,4 +60,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, { readCartProducts, removeFromCart, createOrder })(Cart);
+export default connect(mapStateToProps, { readCartProducts, removeFromCart, createOrder, clearCart })(Cart);
