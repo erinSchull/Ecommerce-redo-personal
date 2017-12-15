@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
-// import './Orders.css';
+import './Orders.css';
 import { connect } from 'react-redux';
-import {readOrders} from './../../ducks/reducer';
+import { readOrders } from './../../ducks/reducer';
 
 class Orders extends Component {
-    // componentDidMount() {
-    //     this.props.readOrders();
-    // }
+    componentDidMount() {
+        this.props.readOrders();
+    }
 
     render() {
         console.log('orders', this.props.orders)
         return (
             <div className="orders-app" >
-                <h2> Orders shown here</h2>
+                <h2>These Are Your Orders!</h2>
+                <h3>Details Shown Below</h3>
 
-                <div>
+                <div className='orders-map' >
                     {this.props.orders.map((products, i) => {
 
                         return ( products.productsid ? 

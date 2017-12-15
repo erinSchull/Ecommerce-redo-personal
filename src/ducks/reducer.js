@@ -66,8 +66,8 @@ export function addToCart(productid){
     }
 };
 
-export function readCartProducts(productsid){
-    const cartProd = axios.get(`/api/cart/${productsid}`)
+export function readCartProducts(productid){
+    const cartProd = axios.get(`/api/cart/${productid}`)
     .then(res => {
         return res.data
     })
@@ -77,8 +77,9 @@ export function readCartProducts(productsid){
     }
 };
 
-export function removeFromCart(productsid){
-    const cartStuff = axios.delete(`/api/cart/${productsid}`)
+export function removeFromCart(id){
+    console.log(id);
+    const cartStuff = axios.delete(`/api/cart/${id}`)
     .then(res => {
         return res.data
     })
@@ -137,17 +138,19 @@ export default function reducer( state = initialState, action){
         cartPlusOne.push(action.payload);
         return Object.assign({}, state, {cart: cartPlusOne});
         case REMOVE_FROM_CART + '_FULFILLED':
+        // const cartMinusOne = state.cart.splice(action.payload, -1);
         return Object.assign({}, state, {cart: action.payload});
         case CLEAR_CART + '_FULFILLED':
         return Object.assign({}, state, {cart: action.payload});
         case GET_CART_PRODUCTS + '_FULFILLED':
         return Object.assign({}, state, {cart: action.payload});
         case CREATE_ORDER + '_FULFILLED':
-        const orderPlusOne = state.cart.slice();
-        orderPlusOne.push(action.payload)
+        const orderPlusOne = state.cart.slice(action.payload);
+        console.log(state);
+        // orderPlusOne.push(action.payload); 
         return Object.assign({}, state, {orders: orderPlusOne});
         case ALL_ORDERS + '_FULFILLED':
-        return Object.assign({}, state, {cart: action.payload});
+        return Object.assign({}, state, {orders: action.payload});
         default: 
         return state
     }

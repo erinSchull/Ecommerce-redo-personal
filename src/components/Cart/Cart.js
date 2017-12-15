@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
-// import './Cart.css';
+import './Cart.css';
 import { connect } from 'react-redux';
 import { readCartProducts, removeFromCart, createOrder, clearCart } from './../../ducks/reducer';
 
 class Cart extends Component {
+    constructor(props){
+        super(props)
+
+        this.handleClick = this.handleClick.bind(this);
+    }
     componentDidMount() {
         this.props.readCartProducts();
     }
@@ -11,17 +16,18 @@ class Cart extends Component {
     //     this.props.removeFromCart();
     // }
     
-    onClick() {
-        this.props.createOrder(this.props.order.productsid);
-        this.props.clearCart();
+    handleClick() {
+        this.props.createOrder();
+        // this.props.clearCart();
     }
     
     render() {
-        const order = this.props.orders;
-        console.log('cart', this.props.cart); //leave this until finished
+        // const order = this.props.orders;
+        console.log('cart', this.props.cart); //no touchy
         return (
             <div className="cart-app" >
-                <h3>Let's see what you want... </h3>
+                <h2>Welcome To Your Cart!</h2>
+                <h3>Let's see what you want</h3>
 
                 <div className="cart-map" >
                     {this.props.cart.map((products, i) => {
@@ -35,7 +41,7 @@ class Cart extends Component {
                                 <p className="price">Product Price: ${products.price}</p>
 
 
-                                <button className="prod-button" onClick={this.onClick} >I changed my mind</button>
+                                <button className="prod-button" onClick={this.props.removeFromCart(products.id)} >I changed my mind</button>
                             </div>
 
                         )
@@ -43,7 +49,7 @@ class Cart extends Component {
                 </div>
                 <div>
                     <a href='/#/orders' >
-                        <button onClick={() => this.props.createOrder(order.productsid)} >Submit order</button>
+                        <button onClick={this.handleClick}>Submit order</button>
                     </a>
                 </div>
             </div>

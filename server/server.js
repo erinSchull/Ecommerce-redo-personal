@@ -32,7 +32,7 @@ app.get('/api/products', prodCtrl.readProducts);
 //cart endpoints
 app.get('/api/cart/:productid', cartCtrl.getProductsOnCart);
 app.post('/api/cart/:productsid',cartCtrl.addToCart);
-app.delete('/api/cart/:productsid',cartCtrl.removeFromCart);
+app.delete('/api/cart/:id',cartCtrl.removeFromCart);
 app.put('/api/cart', cartCtrl.clearCart);
 
 //order endpoints

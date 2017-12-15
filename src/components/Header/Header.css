@@ -1,24 +1,24 @@
-.header{
-    border: solid;
-    border-color: rgba(219, 120, 236, 0.932);
-    border-left-width : 8px;
-    border-right-width : 8px;
-    border-top-width : 12px;
-    border-bottom-width : 12px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: rgb(156, 145, 253);
-}
-
-.Links{
-    color: #FFFFFF;
-    font-size: 19px;
-    text-decoration: none;
-    background-color: rgba(2, 2, 156, 0.78);
-    align-items: center;
-    width: 100px;
-    border: solid;
-    border-color: #05BDBD;
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+@import url("https://fonts.googleapis.com/css?family=Dosis");
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
+@import url("https://fonts.googleapis.com/css?family=Merriweather");
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: solid #039292;
+  border-left-width: 8px;
+  border-right-width: 8px;
+  border-top-width: 12px;
+  border-bottom-width: 12px;
+  background-color: #F0DBCC; }
+  .header .Links {
+    font-family: "Inconsolata", monospace;
+    border: solid #3D0016;
     border-radius: 12px;
-}
+    width: 100px;
+    font-size: 19px;
+    background-color: #BA8480;
+    text-decoration: none;
+    color: #F4F4F4; }

@@ -15,17 +15,17 @@ class Products extends Component {
         
         return (
             <div className="product-app" >
-                <h3> Products available for purchase</h3>
+                <h2>Welcome to the Most Exciting Shop Ever!</h2>
+                <h3> Find your heart's greatest desires here</h3>
                 <div className="product-display" >
                     {this.props.products.map((products, i) => {
                         
                         return (
                             <div key={i} className="product">
-
                                 <img src={products.img} alt={products.title} className='product-image' />
+                                <p className="price">Product Price: ${products.price}</p>
                                 <p>Item: #{products.productid}</p>
                                 <p>Description: {products.title}</p>
-                                <p className="price">Product Price: ${products.price}</p>
                                 
 
                                 <button className="prod-button" onClick={() => this.props.addToCart(products.productid)}>Add this to my cart!</button>
