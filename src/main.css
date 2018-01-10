@@ -113,18 +113,24 @@ a:visited {
         color: #F0DBCC;
         border: solid 5px #4f0000;
         border-radius: 7px; }
-  .cart-app div a button {
-    height: 90px;
-    width: 200px;
-    font-family: "Dosis", sans-serif;
-    font-size: 30px;
-    border: solid #32402f;
-    border-radius: 7px;
-    border-width: 7px;
-    background-color: #FFD1CF;
-    color: #4f0000; }
+  .cart-app div {
+    margin: auto; }
+    .cart-app div a button {
+      margin-top: 90px;
+      height: 90px;
+      width: 200px;
+      font-family: "Dosis", sans-serif;
+      font-size: 30px;
+      border: solid #32402f;
+      border-radius: 7px;
+      border-width: 7px;
+      background-color: #FFD1CF;
+      color: #4f0000; }
 
 .header {
+  position: sticky;
+  top: 0px;
+  padding: 3px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -135,6 +141,7 @@ a:visited {
   border-bottom-width: 12px;
   background-color: #F0DBCC; }
   .header .Links {
+    text-align: center;
     font-family: "Inconsolata", monospace;
     border: solid #3D0016;
     border-radius: 12px;

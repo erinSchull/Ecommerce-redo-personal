@@ -61,8 +61,10 @@
         }
     }
     div{
+        margin: auto;
         a{
             button{
+                margin-top: 90px;
                 height: $productButtonHeight;
                 width: 200px;
                 font-family: $productButtonFontFamily;

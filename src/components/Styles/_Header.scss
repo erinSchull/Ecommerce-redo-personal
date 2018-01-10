@@ -1,4 +1,7 @@
 .header{
+    position: sticky;
+    top: 0px;
+    padding: 3px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -9,6 +12,7 @@
     border-bottom-width: $headerBTBorderWidth;
     background-color: $headerBackgroundColor;
     .Links{
+        text-align: center;
         font-family: $linkFontFamily;
         border: $linkBorder;
         border-radius: $linkBorderRadius;
