@@ -1,0 +1,21 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: $headerBorder;
+    border-left-width: $headerLRBorderWidth;
+    border-right-width: $headerLRBorderWidth;
+    border-top-width: $headerBTBorderWidth;
+    border-bottom-width: $headerBTBorderWidth;
+    background-color: $headerBackgroundColor;
+    .Links{
+        font-family: $linkFontFamily;
+        border: $linkBorder;
+        border-radius: $linkBorderRadius;
+        width: $linkWidth;
+        font-size: $linkFontSize;
+        background-color: $linkBackgroundColor;
+        text-decoration: none;
+        color: $componentTitleFontColor;
+    }
+}

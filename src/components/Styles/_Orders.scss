@@ -1,0 +1,56 @@
+.orders-app{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    h2{
+        font-family: $componentTitleFontFamily;
+        color: $productFontColor;
+        font-size: 32px;
+        border-bottom: solid 5px black;
+        width: 75%;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+    }
+    h3{
+        font-family: $componentSubtitleFontFamily;
+        color: $componentSubtitleFontColor;
+        font-size: 22px;
+        width: 75%;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+    }
+    .orders-map{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .product{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            border: $orderProductBorder;
+            border-width: $productDisplayBorderWidth;
+            height: $cartDisplayHeight;
+            width: $cartDisplayWidth;
+            margin: $productMargin;
+            background-color: $orderProductDisplayBackground;
+            font-family: $productFontFamily;
+            font-size: $productFontSize;
+            color: $orderProductFontColor;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: $productDisplayBorderRadius;
+            .product-image{
+                height: $cartImageHeight;
+                width: $cartImageWidth;
+                border: $orderProductImageBorder;
+                border-radius: $productImageBorderRadius;
+                border-width: $productImageBorderWidth;
+                box-shadow: $imageShadow;
+            }
+        }
+    }
+}

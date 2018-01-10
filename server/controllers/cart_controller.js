@@ -17,9 +17,9 @@ module.exports = {
     },
     removeFromCart: (req, res, next) => {
         const db = req.app.get('db');
-        const {productsid} = req.params;
+        const {id} = req.params;
         console.log('testing the delete')
-        db.delete_from_cart([productsid])
+        db.delete_from_cart([id])
         .then(response => {
             res.status(200).send(response)
         }).catch(err => res.status(500).send(err));
@@ -27,6 +27,8 @@ module.exports = {
     clearCart: (req, res, next) => {
         console.log('testing the cart clear');
         const db = req.app.get('db');
+        console.log('req.body', req.body);
+        //figure out this req.body
         db.clear_cart()
         .then(response => {
             res.status(200).send(response)

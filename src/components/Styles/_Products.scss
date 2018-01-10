@@ -1,0 +1,65 @@
+.product-app{
+    display: flex;
+    flex-direction: column;
+    height: 3800px;
+    h2{
+       font-family: $componentTitleFontFamily;
+       color: $productFontColor;
+       font-size: 32px;
+       border-bottom: solid 5px black;
+       width: 75%;
+       display: flex;
+       flex-flow: row;
+       justify-content: center;
+    }
+    h3{
+        font-family: $componentSubtitleFontFamily;
+        color: $componentSubtitleFontColor;
+        font-size: 22px;
+        width: 75%;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+    }
+    .product-display{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        .product{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: $productDisplayBorder;
+            border-width: $productDisplayBorderWidth;
+            height: $productDisplayHeight;
+            width: $productDisplayWidth;
+            margin: $productMargin;
+            background-color: $productBackgroundColor;
+            font-family: $productFontFamily;
+            font-size: $productFontSize;
+            color: $productFontColor;
+            padding: 5px;
+            border-radius: $productDisplayBorderRadius;
+            .product-image{
+                height: $productImageHeight;
+                width: $productImageWidth;
+                border: $productImageBorder;
+                border-radius: $productImageBorderRadius;
+                border-width: $productImageBorderWidth;
+                box-shadow: $imageShadow;
+            }
+            .prod-button{
+                height: $productButtonHeight;
+                font-size: $productButtonFontSize;
+                font-family: $productButtonFontFamily;
+                background-color: $productButtonColor;
+                color: $productButtonFontColor;
+                border: $productButtonBorder;
+                border-radius: $productButtonBorderRadius;
+            }
+        }
+    }
+}

@@ -1,4 +1,4 @@
-from products.css:
+**from products.css:
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 @import url('https://fonts.googleapis.com/css?family=Dosis');
@@ -53,3 +53,39 @@ from products.css:
     flex-direction: column;
     align-items: center;
 }
+
+
+**from header.css:
+
+.header{
+    border: solid;
+    border-color: rgba(219, 120, 236, 0.932);
+    border-left-width : 8px;
+    border-right-width : 8px;
+    border-top-width : 12px;
+    border-bottom-width : 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(156, 145, 253);
+}
+
+.Links{
+    color: #FFFFFF;
+    font-size: 19px;
+    text-decoration: none;
+    background-color: rgba(2, 2, 156, 0.78);
+    align-items: center;
+    width: 100px;
+    border: solid;
+    border-color: #05BDBD;
+    border-radius: 12px;
+}
+
+**from app.css:
+
+.App {
+  text-align: center;
+  background-color: rgba(178, 173, 212, 0.884);
+}
+

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// products Variables
+$productImageHeight: 300px;
+$productImageWidth: 300px;
+$productImageBorder: solid #F0DBCC;
+$productImageBorderRadius: 10px;
+$productImageBorderWidth: 5px;
+$productDisplayBorder: solid #3D0016;
+$productDisplayBorderWidth: 7px;
+$productDisplayHeight: 700px;
+$productDisplayWidth: 500px;
+$productFontFamily: 'Playfair Display', serif;
+$productFontSize: 30px;
+$productFontColor: white;
+$productMargin: 5px;
+$productBackgroundColor: #BA8480;
+$productButtonColor: #32402f;
+$productButtonFontFamily: 'Dosis', sans-serif;
+$productButtonFontColor: #F0DBCC;
+$productButtonFontSize: 20px;
+$productButtonHeight: 90px;
+$productButtonBorder: solid 5px #4f0000;
+$productButtonBorderRadius: 7px;
+$productDisplayBorderRadius: 7px;
+
+//figure out styling for product price
+
+//cart Variables
+$checkoutButtonColor: #FFD1CF;
+$checkoutButtonFontColor: #4f0000;
+$checkoutButtonBorder: solid #32402f;
+$checkoutButtonBorderWidth: 7px;
+$cartFontColor: #F0DBCC;
+$cartDisplayHeight: 220px;
+$cartDisplayWidth: 90%;
+$cartImageHeight: 200px;
+$cartImageWidth: 200px;
+$cartImageBorder: solid rgb(3, 146, 146);
+
+//header Variables
+$headerBorder: solid rgb(3, 146, 146);
+$headerLRBorderWidth: 8px;
+$headerBTBorderWidth: 12px;
+$headerBackgroundColor: #F0DBCC;
+$linkFontSize: 19px;
+$linkBackgroundColor: #BA8480;
+$linkBorder: solid #3D0016;
+$linkBorderRadius: 12px;
+$linkWidth: 100px;
+$linkFontFamily: 'Inconsolata', monospace;
+
+//components Variables
+$appBackgroundColor: #788F82;
+$componentTitleFontColor: #F4F4F4;
+$componentTitleFontFamily: 'Merriweather', serif;
+$componentSubtitleFontFamily: 'Nunito', sans-serif;
+$componentSubtitleFontColor: #8E372C;
+
+//orders Variables
+$orderProductImageBorder: solid #F0DBCC;
+$orderProductDisplayBackground: #BA8480;
+$orderProductBorder: solid 10px #32402f;
+$orderProductFontColor: #4f0000;
+
+
+//shadows
+$imageShadow: 0 20px 32px 0 rgba(0, 0, 0, 0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.26);

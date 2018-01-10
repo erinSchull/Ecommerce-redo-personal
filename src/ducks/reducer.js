@@ -8,7 +8,6 @@ let initialState ={
 
 const GET_PRODUCT = 'GET_PRODUCT';
 const ALL_PRODUCTS = 'ALL_PRODUCTS';
-const ADD_REDUX_PRODUCT = 'ADD_REDUX_PRODUCT';
 const ADD_TO_CART = 'ADD_TO_CART';
 const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
 const GET_CART_PRODUCTS = 'GET_CART_PRODUCTS';
@@ -31,18 +30,6 @@ export function getProduct(productid) {
     }
 };
 
-export function addProductsOnRedux(){
-    const products = axios.post('/api/product')
-    .then(res => {
-        return res.data
-    })
-    return{
-        type: ADD_REDUX_PRODUCT,
-        payload: products
-    }
-
-};
-
 export function readProducts(){
     const products = axios.get('/api/products')
     .then(res => {
@@ -55,7 +42,7 @@ export function readProducts(){
 };
 
 export function addToCart(productid){
-    const cartProd = axios.post(`/api/cart/${productid }`)
+    const cartProd = axios.post(`/api/cart/${productid}`)
     .then(res => {
         console.log('check if we get here cart');
         return res.data
@@ -66,8 +53,8 @@ export function addToCart(productid){
     }
 };
 
-export function readCartProducts(productsid){
-    const cartProd = axios.get(`/api/cart/${productsid}`)
+export function readCartProducts(productid){
+    const cartProd = axios.get(`/api/cart/${productid}`)
     .then(res => {
         return res.data
     })
@@ -77,8 +64,9 @@ export function readCartProducts(productsid){
     }
 };
 
-export function removeFromCart(productsid){
-    const cartStuff = axios.delete(`/api/cart/${productsid}`)
+export function removeFromCart(id){
+    console.log(id);
+    const cartStuff = axios.delete(`/api/cart/${id}`)
     .then(res => {
         return res.data
     })
@@ -128,8 +116,6 @@ export default function reducer( state = initialState, action){
     switch(action.type) {
         case GET_PRODUCT + '_FULFILLED':
         return Object.assign({}, state, {products: action.payload});
-        case ADD_REDUX_PRODUCT + '_FULFILLED':
-        return Object.assign({}, state, {products: action.payload});
         case ALL_PRODUCTS + '_FULFILLED':
         return Object.assign({}, state, {products: action.payload});
         case ADD_TO_CART + '_FULFILLED':
@@ -137,17 +123,19 @@ export default function reducer( state = initialState, action){
         cartPlusOne.push(action.payload);
         return Object.assign({}, state, {cart: cartPlusOne});
         case REMOVE_FROM_CART + '_FULFILLED':
+        // const cartMinusOne = state.cart.splice(action.payload, -1);
         return Object.assign({}, state, {cart: action.payload});
         case CLEAR_CART + '_FULFILLED':
         return Object.assign({}, state, {cart: action.payload});
         case GET_CART_PRODUCTS + '_FULFILLED':
         return Object.assign({}, state, {cart: action.payload});
         case CREATE_ORDER + '_FULFILLED':
-        const orderPlusOne = state.cart.slice();
-        orderPlusOne.push(action.payload)
+        const orderPlusOne = state.cart.slice(action.payload);
+        console.log(state);
+        // orderPlusOne.push(action.payload); 
         return Object.assign({}, state, {orders: orderPlusOne});
         case ALL_ORDERS + '_FULFILLED':
-        return Object.assign({}, state, {cart: action.payload});
+        return Object.assign({}, state, {orders: action.payload});
         default: 
         return state
     }
