@@ -8,7 +8,6 @@ let initialState ={
 
 const GET_PRODUCT = 'GET_PRODUCT';
 const ALL_PRODUCTS = 'ALL_PRODUCTS';
-const ADD_REDUX_PRODUCT = 'ADD_REDUX_PRODUCT';
 const ADD_TO_CART = 'ADD_TO_CART';
 const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
 const GET_CART_PRODUCTS = 'GET_CART_PRODUCTS';
@@ -29,18 +28,6 @@ export function getProduct(productid) {
         type: GET_PRODUCT,
         payload: product
     }
-};
-
-export function addProductsOnRedux(){
-    const products = axios.post('/api/product')
-    .then(res => {
-        return res.data
-    })
-    return{
-        type: ADD_REDUX_PRODUCT,
-        payload: products
-    }
-
 };
 
 export function readProducts(){
@@ -128,8 +115,6 @@ export function readOrders(){
 export default function reducer( state = initialState, action){
     switch(action.type) {
         case GET_PRODUCT + '_FULFILLED':
-        return Object.assign({}, state, {products: action.payload});
-        case ADD_REDUX_PRODUCT + '_FULFILLED':
         return Object.assign({}, state, {products: action.payload});
         case ALL_PRODUCTS + '_FULFILLED':
         return Object.assign({}, state, {products: action.payload});
