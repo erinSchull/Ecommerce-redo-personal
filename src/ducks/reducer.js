@@ -77,6 +77,7 @@ export function removeFromCart(id){
 };
 
 export function clearCart(){
+    console.log('clearing cart?')
     const cartCont = axios.put('/api/cart')
     .then(res => {
         return res.data
