@@ -7,9 +7,6 @@ class Products extends Component {
     componentDidMount() {
         this.props.readProducts();
     }
-    // addToCart(product){
-    //     this.props.addToCart(product);
-    // }
 
     render() {
         
