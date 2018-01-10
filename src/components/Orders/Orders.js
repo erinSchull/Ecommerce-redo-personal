@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Orders.css';
+
 import { connect } from 'react-redux';
 import { readOrders } from './../../ducks/reducer';
 

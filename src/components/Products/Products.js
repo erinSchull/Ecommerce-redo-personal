@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Products.css';
+
 import { connect } from 'react-redux';
 import { readProducts, addToCart } from './../../ducks/reducer';
 

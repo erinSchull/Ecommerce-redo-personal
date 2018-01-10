@@ -55,7 +55,7 @@ export function readProducts(){
 };
 
 export function addToCart(productid){
-    const cartProd = axios.post(`/api/cart/${productid }`)
+    const cartProd = axios.post(`/api/cart/${productid}`)
     .then(res => {
         console.log('check if we get here cart');
         return res.data

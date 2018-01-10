@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Cart.css';
+
 import { connect } from 'react-redux';
 import { readCartProducts, removeFromCart, createOrder, clearCart } from './../../ducks/reducer';
 
@@ -12,17 +12,12 @@ class Cart extends Component {
     componentDidMount() {
         this.props.readCartProducts();
     }
-    // componentWillReceiveProps(){
-    //     this.props.removeFromCart();
-    // }
-    
     handleClick() {
         this.props.createOrder();
-        // this.props.clearCart();
+        // this.props.clearCart(); //uncomment when working back to front
     }
     
     render() {
-        // const order = this.props.orders;
         console.log('cart', this.props.cart); //no touchy
         return (
             <div className="cart-app" >
@@ -41,7 +36,7 @@ class Cart extends Component {
                                 <p className="price">Product Price: ${products.price}</p>
 
 
-                                <button className="prod-button" onClick={this.props.removeFromCart(products.id)} >I changed my mind</button>
+                                <button className="prod-button" onClick={() => this.props.removeFromCart(products.id)} >I changed my mind</button>
                             </div>
 
                         )
