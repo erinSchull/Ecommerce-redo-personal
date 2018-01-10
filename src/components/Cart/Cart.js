@@ -14,7 +14,7 @@ class Cart extends Component {
     }
     handleClick() {
         this.props.createOrder();
-        // this.props.clearCart(); //uncomment when working back to front
+        this.props.clearCart();
     }
     
     render() {
