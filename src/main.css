@@ -54,11 +54,6 @@ a:visited {
   color: #320f92;
   text-decoration: none; }
 
-.App {
-  text-align: center;
-  background-color: #788F82;
-}  
-
 .cart-app {
   display: flex;
   flex-direction: column;
