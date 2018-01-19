@@ -33,7 +33,7 @@ class Cart extends Component {
                                 <img src={products.img} alt={products.title} className='product-image' />
                                 <p>Item: #{products.productid}</p>
                                 <p>Description: {products.title}</p>
-                                <p className="price">Product Price: ${products.price}</p>
+                                <p className="price">Product Price: ${products.price}.00</p>
 
 
                                 <button className="prod-button" onClick={() => this.props.removeFromCart(products.id)} >I changed my mind</button>
@@ -42,7 +42,7 @@ class Cart extends Component {
                         )
                     })}
                 </div>
-                <div>
+                <div className= "order-button">
                     <a href='/#/orders' >
                         <button onClick={this.handleClick}>Submit order</button>
                     </a>

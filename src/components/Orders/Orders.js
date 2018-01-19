@@ -24,7 +24,7 @@ class Orders extends Component {
                                 <img src={products.img} alt={products.title} className='product-image' />
                                 <p>Item: #{products.productid}</p>
                                 <p>Description: {products.title}</p>
-                                <p className="price">Product Price: ${products.price}</p>
+                                <p className="price">Product Price: ${products.price}.00</p>
 
                             </div>
                         : null )

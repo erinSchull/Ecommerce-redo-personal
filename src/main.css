@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
 @import url("https://fonts.googleapis.com/css?family=Dosis");
 @import url("https://fonts.googleapis.com/css?family=Inconsolata");
-@import url("https://fonts.googleapis.com/css?family=Merriweather");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -60,29 +60,32 @@ a:visited {
 .cart-app {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-top: 10px; }
   .cart-app h2 {
-    font-family: "Merriweather", serif;
+    font-family: "Montserrat", sans-serif;
     color: white;
     font-size: 32px;
     border-bottom: solid 5px black;
     width: 75%;
     display: flex;
     flex-flow: row;
-    justify-content: center; }
+    padding-top: 3px;
+    padding-bottom: 3px; }
   .cart-app h3 {
     font-family: "Nunito", sans-serif;
     color: #8E372C;
     font-size: 22px;
-    width: 75%;
     display: flex;
     flex-flow: row;
-    justify-content: center; }
+    padding-left: 20%;
+    padding-top: 5px;
+    padding-bottom: 3px; }
   .cart-app .cart-map {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    margin: 10px; }
     .cart-app .cart-map .product {
       display: flex;
       flex-direction: row;
@@ -94,9 +97,11 @@ a:visited {
       width: 90%;
       margin: 5px;
       background-color: #BA8480;
-      font-family: "Playfair Display", serif;
+      font-family: "Nunito Sans", sans-serif;
       font-size: 30px;
       color: white;
+      padding-top: 5px;
+      padding-bottom: 5px;
       border-radius: 7px; }
       .cart-app .cart-map .product .product-image {
         height: 200px;
@@ -113,9 +118,10 @@ a:visited {
         color: #F0DBCC;
         border: solid 5px #4f0000;
         border-radius: 7px; }
-  .cart-app div {
-    margin: auto; }
-    .cart-app div a button {
+  .cart-app .order-button {
+    margin: auto;
+    height: 300px; }
+    .cart-app .order-button a button {
       margin-top: 90px;
       height: 90px;
       width: 200px;
@@ -132,51 +138,64 @@ a:visited {
   top: 0px;
   padding: 3px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
   border: solid #039292;
   border-left-width: 8px;
   border-right-width: 8px;
   border-top-width: 12px;
   border-bottom-width: 12px;
   background-color: #F0DBCC; }
-  .header .Links {
-    text-align: center;
-    font-family: "Inconsolata", monospace;
-    border: solid #3D0016;
-    border-radius: 12px;
-    width: 100px;
-    font-size: 19px;
-    background-color: #BA8480;
-    text-decoration: none;
-    color: #F4F4F4; }
+  .header .title {
+    color: #4d213b;
+    font-size: 30px;
+    margin: 5px; }
+  .header .navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    .header .navbar .Links {
+      text-align: center;
+      font-family: "Inconsolata", monospace;
+      border: solid #3D0016;
+      border-radius: 12px;
+      width: 100px;
+      font-size: 19px;
+      background-color: #BA8480;
+      text-decoration: none;
+      color: #F4F4F4; }
 
 .orders-app {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-top: 10px; }
   .orders-app h2 {
-    font-family: "Merriweather", serif;
+    font-family: "Montserrat", sans-serif;
     color: white;
     font-size: 32px;
     border-bottom: solid 5px black;
     width: 75%;
     display: flex;
     flex-flow: row;
-    justify-content: center; }
+    justify-content: center;
+    padding-top: 3px;
+    padding-bottom: 3px; }
   .orders-app h3 {
     font-family: "Nunito", sans-serif;
     color: #8E372C;
     font-size: 22px;
-    width: 75%;
     display: flex;
     flex-flow: row;
-    justify-content: center; }
+    padding-left: 20%;
+    padding-top: 5px;
+    padding-bottom: 3px; }
   .orders-app .orders-map {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    margin: 10px; }
     .orders-app .orders-map .product {
       display: flex;
       flex-direction: row;
@@ -188,9 +207,9 @@ a:visited {
       width: 90%;
       margin: 5px;
       background-color: #BA8480;
-      font-family: "Playfair Display", serif;
+      font-family: "Nunito Sans", sans-serif;
       font-size: 30px;
-      color: #4f0000;
+      color: white;
       padding-top: 5px;
       padding-bottom: 5px;
       border-radius: 7px; }
@@ -205,30 +224,35 @@ a:visited {
 .product-app {
   display: flex;
   flex-direction: column;
-  height: 3800px; }
+  height: 3800px;
+  margin-top: 10px; }
   .product-app h2 {
-    font-family: "Merriweather", serif;
+    font-family: "Montserrat", sans-serif;
     color: white;
     font-size: 32px;
     border-bottom: solid 5px black;
     width: 75%;
     display: flex;
     flex-flow: row;
-    justify-content: center; }
+    justify-content: center;
+    padding-top: 3px;
+    padding-bottom: 3px; }
   .product-app h3 {
     font-family: "Nunito", sans-serif;
     color: #8E372C;
     font-size: 22px;
-    width: 75%;
     display: flex;
     flex-flow: row;
-    justify-content: center; }
+    padding-left: 20%;
+    padding-top: 5px;
+    padding-bottom: 3px; }
   .product-app .product-display {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    margin: 10px; }
     .product-app .product-display .product {
       display: flex;
       flex-direction: column;
@@ -240,7 +264,7 @@ a:visited {
       width: 500px;
       margin: 5px;
       background-color: #BA8480;
-      font-family: "Playfair Display", serif;
+      font-family: "Nunito Sans", sans-serif;
       font-size: 30px;
       color: white;
       padding: 7px;
