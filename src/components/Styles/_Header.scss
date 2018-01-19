@@ -1,36 +1,51 @@
 .header{
     position: sticky;
     top: 0px;
-    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: $headerBorder;
-    border-left-width: $headerLRBorderWidth;
-    border-right-width: $headerLRBorderWidth;
-    border-top-width: $headerBTBorderWidth;
-    border-bottom-width: $headerBTBorderWidth;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: $headerBorder;
     background-color: $headerBackgroundColor;
     .title {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
         color: $titleColor;
         font-size: 30px;
         margin: 5px;
+        .icon{
+            border-radius: 7px;
+            margin-right: 3px;
+            height: 50px;
+            width: 50px;
+        }
     }
     .navbar {
-        width: 100%;
+        width: 50%;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: flex-end;
+        align-items: flex-end;
         .Links{
-        text-align: center;
-        font-family: $linkFontFamily;
-        border: $linkBorder;
-        border-radius: $linkBorderRadius;
-        width: $linkWidth;
-        font-size: $linkFontSize;
-        background-color: $linkBackgroundColor;
-        text-decoration: none;
-        color: $componentTitleFontColor;
+            border: $linkBorder;
+            border-radius: $linkBorderRadius;
+            padding: 5px;
+            width: $linkWidth;
+            background-color: $linkBackgroundColor;
+            margin-left: 5px;
+            margin-right: 5px;
+            .pages{
+                text-align: center;
+                text-decoration: none;
+                color: $componentTitleFontColor;
+                font-size: $linkFontSize;
+                font-family: $linkFontFamily;
+        }
     }
 }
 }
