@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+// new ^
 @import url('https://fonts.googleapis.com/css?family=Dosis');
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
-@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+//new ^
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+//new ^
 
 // products Variables
 $productImageHeight: 300px;
@@ -14,7 +17,7 @@ $productDisplayBorder: solid #3D0016;
 $productDisplayBorderWidth: 7px;
 $productDisplayHeight: 700px;
 $productDisplayWidth: 500px;
-$productFontFamily: 'Playfair Display', serif;
+$productFontFamily: 'Nunito Sans', sans-serif;
 $productFontSize: 30px;
 $productFontColor: white;
 $productMargin: 5px;
@@ -53,19 +56,21 @@ $linkBorder: solid #3D0016;
 $linkBorderRadius: 12px;
 $linkWidth: 100px;
 $linkFontFamily: 'Inconsolata', monospace;
+$titleColor: rgb(77, 33, 59);
 
 //components Variables
 $appBackgroundColor: #788F82;
 $componentTitleFontColor: #F4F4F4;
-$componentTitleFontFamily: 'Merriweather', serif;
+$componentTitleFontFamily: 'Montserrat', sans-serif;
 $componentSubtitleFontFamily: 'Nunito', sans-serif;
 $componentSubtitleFontColor: #8E372C;
+$mapMargin: 10px;
+$pageTopMargin: 10px;
 
 //orders Variables
 $orderProductImageBorder: solid #F0DBCC;
 $orderProductDisplayBackground: #BA8480;
 $orderProductBorder: solid 10px #32402f;
-$orderProductFontColor: #4f0000;
 
 
 //shadows

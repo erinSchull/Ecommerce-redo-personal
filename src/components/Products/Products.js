@@ -20,7 +20,7 @@ class Products extends Component {
                         return (
                             <div key={i} className="product">
                                 <img src={products.img} alt={products.title} className='product-image' />
-                                <p className="price">Product Price: ${products.price}</p>
+                                <p className="price">Product Price: ${products.price}.00</p>
                                 <p>Item: #{products.productid}</p>
                                 <p>Description: {products.title}</p>
                                 
