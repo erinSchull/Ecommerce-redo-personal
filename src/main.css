@@ -145,7 +145,6 @@ a:visited {
   justify-content: space-between;
   align-items: flex-end;
   border-bottom: solid #039292;
-  border-bottom-width: 10px;
   background-color: #F0DBCC; }
   .header .title {
     display: flex;
