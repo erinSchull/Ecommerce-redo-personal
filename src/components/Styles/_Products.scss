@@ -3,67 +3,115 @@
     flex-direction: column;
     height: 3800px;
     margin-top: $pageTopMargin;
-    h2{
-       font-family: $componentTitleFontFamily;
-       color: $productFontColor;
-       font-size: 32px;
-       border-bottom: solid 5px black;
-       width: 75%;
-       display: flex;
-       flex-flow: row;
-       justify-content: center;
-       padding-top: 3px;
-       padding-bottom: 3px;
-    }
-    h3{
-        font-family: $componentSubtitleFontFamily;
-        color: $componentSubtitleFontColor;
-        font-size: 22px;
-        display: flex;
-        flex-flow: row;
-        padding-left: 20%;
-        padding-top: 5px;
+        .title{
+        font-family: $componentTitleFontFamily;
+        color: $componentTitleFontColor;
+        font-size: 32px;
+        border-bottom: $pageTitleBorder;
+        width: 75%;
+        padding-left: 15%;
+        padding-top: 3px;
         padding-bottom: 3px;
-    }
-    .product-display{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        margin: $mapMargin;
-        .product{
+        }
+        .sub{
+            font-family: $componentSubtitleFontFamily;
+            color: $componentSubtitleFontColor;
+            font-size: 22px;
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            border: $productDisplayBorder;
-            border-width: $productDisplayBorderWidth;
-            height: $productDisplayHeight;
-            width: $productDisplayWidth;
-            margin: $productMargin;
-            background-color: $productBackgroundColor;
-            font-family: $productFontFamily;
-            font-size: $productFontSize;
-            color: $productFontColor;
-            padding: 7px;
-            border-radius: $productDisplayBorderRadius;
-            .product-image{
-                height: $productImageHeight;
-                width: $productImageWidth;
-                border: $productImageBorder;
-                border-radius: $productImageBorderRadius;
-                border-width: $productImageBorderWidth;
-                box-shadow: $imageShadow;
+            flex-flow: row;
+            padding-left: 20%;
+            padding-top: 5px;
+            padding-bottom: 3px;
+        }
+    .shop{
+        display: flex;
+        flex-flow: column;
+        flex-wrap: wrap;
+        align-content: stretch;
+        .product-display{
+            width: 70%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: baseline;
+            margin: $mapMargin; 
+            .product:hover{
+                box-shadow: $productHoverShadow;
             }
-            .prod-button{
-                height: $productButtonHeight;
-                font-size: $productButtonFontSize;
-                font-family: $productButtonFontFamily;
-                background-color: $productButtonColor;
-                color: $productButtonFontColor;
-                border: $productButtonBorder;
-                border-radius: $productButtonBorderRadius;
+            .product{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                // border: $productDisplayBorder;
+                // border-width: $productDisplayBorderWidth;
+                height: $productDisplayHeight;
+                width: $productDisplayWidth;
+                margin-left: $productLTMargin;
+                margin-top: $productLTMargin;
+                margin-bottom: $productBRMargin;
+                margin-right: $productBRMargin;
+                background-color: $productBackgroundColor;
+                font-family: $productFontFamily;
+                font-size: $productFontSize;
+                color: $productFontColor;
+                padding: 7px;
+                border-radius: $productDisplayBorderRadius;
+                box-shadow: $shopProductShadow;
+               
+                .product-image{
+                    height: $productImageHeight;
+                    width: $productImageWidth;
+                    border: $productImageBorder;
+                    border-radius: $productImageBorderRadius;
+                    box-shadow: $imageShadow;
+                }
+                .prod-button{
+                    height: $productButtonHeight;
+                    font-size: $productButtonFontSize;
+                    font-family: $productButtonFontFamily;
+                    background-color: $productButtonColor;
+                    color: $productButtonFontColor;
+                    border: $productButtonBorder;
+                    border-radius: $productButtonBorderRadius;
+                }
+            }
+        }
+        .about{
+            position: sticky;
+            top: 25%;
+            right: 50px;
+            margin-left: 30px;
+            width: 230px;
+            height: 300px;
+            border-left: solid 5px rgb(156, 150, 150);
+            border-bottom: solid 5px rgb(156, 150, 150);
+            padding-left: 10px;
+            padding-right: 10px;
+            .abt-shop{
+                position: relative;
+                left: 0px;
+                top: 10%;
+                text-align: left;
+                font-size: 25px;
+                font-family: $linkFontFamily;
+                color: $aboutTitleFontColor;
+            }
+            .join{
+                position: relative;
+                top: 15%;
+                padding-bottom: 3px;
+                font-family: $componentSubtitleFontFamily;
+                font-size: 18px;
+                color: $aboutJoinFontColor;
+            }
+            .descript{
+                text-align: justify;
+                position: absolute;
+                bottom: 25%;
+                padding-top: 5px;
+                color: #333;
+                font-size: 18px;
             }
         }
     }

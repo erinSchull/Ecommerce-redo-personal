@@ -3,18 +3,17 @@
     flex-direction: column;
     flex-wrap: wrap;
     margin-top: $pageTopMargin;
-    h2{
+    .title{
         font-family: $componentTitleFontFamily;
-        color: $productFontColor;
+        color: $componentTitleFontColor;;
         font-size: 32px;
-        border-bottom: solid 5px black;
+        border-bottom: $pageTitleBorder;
         width: 75%;
-        display: flex;
-        flex-flow: row;
+        padding-left: 15%;
         padding-top: 3px;
         padding-bottom: 3px;
      }
-     h3{
+     .sub{
         font-family: $componentSubtitleFontFamily;
         color: $componentSubtitleFontColor;
         font-size: 22px;
@@ -29,16 +28,19 @@
         flex-direction: column;
         align-items: center;
         margin: $mapMargin;
+        .product:hover{
+            box-shadow: $cartHoverShadow;
+        }
         .product{
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
-            border: $productDisplayBorder;
-            border-width: $productDisplayBorderWidth;
+            // border: $productDisplayBorder;
+            // border-width: $productDisplayBorderWidth;
             height: $cartDisplayHeight;
             width: $cartDisplayWidth;
-            margin: $productMargin;
+            margin: $cartProductMargin;
             background-color: $productBackgroundColor;
             font-family: $productFontFamily;
             font-size: $productFontSize;
@@ -46,12 +48,13 @@
             padding-top: 5px;
             padding-bottom: 5px;
             border-radius: $productDisplayBorderRadius;
+            box-shadow: $cartProductShadow;
             .product-image{
                 height: $cartImageHeight;
                 width: $cartImageWidth;
-                border: $cartImageBorder;
-                border-radius: $productImageBorderRadius;
+                border: $productImageBorder;
                 border-width: $productImageBorderWidth;
+                border-radius: $productImageBorderRadius;
                 box-shadow: $imageShadow;
             }
             .prod-button{
@@ -80,6 +83,7 @@
                 border-width: $checkoutButtonBorderWidth;
                 background-color: $checkoutButtonColor;
                 color: $checkoutButtonFontColor;
+                box-shadow: $checkoutButtonShadow;
             }
         }
     }

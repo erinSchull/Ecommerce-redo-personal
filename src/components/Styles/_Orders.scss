@@ -1,21 +1,18 @@
 .orders-app{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     margin-top: $pageTopMargin;
-    h2{
+    .title{
         font-family: $componentTitleFontFamily;
-        color: $productFontColor;
+        color: $componentTitleFontColor;
         font-size: 32px;
-        border-bottom: solid 5px black;
+        border-bottom: $pageTitleBorder;
         width: 75%;
-        display: flex;
-        flex-flow: row;
-        justify-content: center;
+        padding-left: 15%;
         padding-top: 3px;
         padding-bottom: 3px;
      }
-    h3{
+    .sub{
         font-family: $componentSubtitleFontFamily;
         color: $componentSubtitleFontColor;
         font-size: 22px;
@@ -35,12 +32,12 @@
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
-            border: $orderProductBorder;
+            border: $productDisplayBorder;
             border-width: $productDisplayBorderWidth;
             height: $cartDisplayHeight;
             width: $cartDisplayWidth;
-            margin: $productMargin;
-            background-color: $orderProductDisplayBackground;
+            margin: $cartProductMargin;
+            background-color: $productBackgroundColor;
             font-family: $productFontFamily;
             font-size: $productFontSize;
             color: $productFontColor;
@@ -50,7 +47,7 @@
             .product-image{
                 height: $cartImageHeight;
                 width: $cartImageWidth;
-                border: $orderProductImageBorder;
+                border: $productImageBorder;
                 border-radius: $productImageBorderRadius;
                 border-width: $productImageBorderWidth;
                 box-shadow: $imageShadow;

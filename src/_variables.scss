@@ -10,33 +10,37 @@
 // products Variables
 $productImageHeight: 300px;
 $productImageWidth: 300px;
-$productImageBorder: solid #F0DBCC;
-$productImageBorderRadius: 10px;
+$productImageBorder: solid 5px #EB6E80;
 $productImageBorderWidth: 5px;
-$productDisplayBorder: solid #3D0016;
+$productImageBorderRadius: 10px;
+$productDisplayBorder: solid #008F95;
 $productDisplayBorderWidth: 7px;
 $productDisplayHeight: 700px;
-$productDisplayWidth: 500px;
+$productDisplayWidth: 450px;
 $productFontFamily: 'Nunito Sans', sans-serif;
 $productFontSize: 30px;
 $productFontColor: white;
-$productMargin: 5px;
-$productBackgroundColor: #BA8480;
-$productButtonColor: #32402f;
+$productLTMargin: 7px;
+$productBRMargin: 15px;
+$productBackgroundColor: #008F95;
+$productButtonColor: white;
 $productButtonFontFamily: 'Dosis', sans-serif;
-$productButtonFontColor: #F0DBCC;
+$productButtonFontColor: #E24E42;
 $productButtonFontSize: 20px;
 $productButtonHeight: 90px;
-$productButtonBorder: solid 5px #4f0000;
+$productButtonBorder: solid 5px rgba(226, 79, 66, 0.89);
 $productButtonBorderRadius: 7px;
 $productDisplayBorderRadius: 7px;
+$productDisplayPaddingLR: 20px;
 
-//figure out styling for product price
+//about Variables
+$aboutTitleFontColor: #008F95;
+$aboutJoinFontColor: #E24E42;
 
 //cart Variables
-$checkoutButtonColor: #FFD1CF;
-$checkoutButtonFontColor: #4f0000;
-$checkoutButtonBorder: solid #32402f;
+$checkoutButtonColor: white;
+$checkoutButtonFontColor: #E9B000;
+$checkoutButtonBorder: solid rgba(233, 175, 0, 0.76);
 $checkoutButtonBorderWidth: 7px;
 $cartFontColor: #F0DBCC;
 $cartDisplayHeight: 220px;
@@ -44,32 +48,38 @@ $cartDisplayWidth: 90%;
 $cartImageHeight: 200px;
 $cartImageWidth: 200px;
 $cartImageBorder: solid rgb(3, 146, 146);
+$cartProductMargin: 7px;
 
 //header Variables
 $headerBorder: solid rgb(3, 146, 146);
 $headerBackgroundColor: #F0DBCC;
 $linkFontSize: 20px;
-$linkBackgroundColor: #BA8480;
-$linkBorder: solid #3D0016;
+$linkFontColor: #F4F4F4;
+$linkBackgroundColor: #EB6E80;
+$linkBorder: solid 5px #E24E42;
 $linkBorderRadius: 12px;
 $linkWidth: 100px;
 $linkFontFamily: 'Inconsolata', monospace;
-$titleColor: rgb(113, 139, 124);
+$titleColor: #008F95;
 
 //components Variables
-$appBackgroundColor: rgb(137, 160, 147);
-$componentTitleFontColor: #F4F4F4;
+$appBackgroundColor: #F4F4F4;
+$componentTitleFontColor: #e24e42;
 $componentTitleFontFamily: 'Montserrat', sans-serif;
 $componentSubtitleFontFamily: 'Nunito', sans-serif;
-$componentSubtitleFontColor: #8E372C;
+$componentSubtitleFontColor: #333;
+$pageTitleBorder: solid 5px #E9B000;
 $mapMargin: 10px;
 $pageTopMargin: 10px;
 
 //orders Variables
-$orderProductImageBorder: solid #F0DBCC;
-$orderProductDisplayBackground: #BA8480;
-$orderProductBorder: solid 10px #32402f;
+
 
 
 //shadows
 $imageShadow: 0 20px 32px 0 rgba(0, 0, 0, 0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.26);
+$shopProductShadow: 0 10px 16px 0 rgba(0, 0, 0, 0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.26);
+$productHoverShadow: 0 20px 32px 0 rgba(39, 32, 32, 0.479);
+$cartProductShadow: 0 6px 15px 0 rgba(0, 0, 0, 0.25);
+$cartHoverShadow: 0 12px 30px 0 rgba(39, 32, 32, 0.479);
+$checkoutButtonShadow: 3px 5px 0 0 rgba(58, 56, 56, 0.541);
