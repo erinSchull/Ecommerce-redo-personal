@@ -9,7 +9,7 @@ class Header extends Component {
             <div className="header" >
                 <div className="title">
                     <img src={drSeussIcon} alt='Dr. Seuss Hat' className='icon' />
-                    <h1>Dr. Suess' Shop of Wonderful Extravaganza!</h1>
+                    <h1 className='app-title' >Dr. Suess' Shop of Wonderful Extravaganza!</h1>
                 </div>
                 <div className= "navbar">
                     <Link className='Links' to='/' >

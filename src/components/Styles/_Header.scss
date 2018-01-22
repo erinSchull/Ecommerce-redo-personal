@@ -15,14 +15,17 @@
         display: flex;
         flex-direction: row;
         align-items: flex-end;
-        color: $titleColor;
-        font-size: 30px;
         margin: 5px;
         .icon{
             border-radius: 7px;
             margin-right: 3px;
             height: 50px;
             width: 50px;
+        }
+        .app-title{
+            margin-left: 5px;
+            color: $titleColor;
+            font-size: 30px;
         }
     }
     .navbar {
@@ -42,7 +45,7 @@
             .pages{
                 text-align: center;
                 text-decoration: none;
-                color: $componentTitleFontColor;
+                color: $linkFontColor;
                 font-size: $linkFontSize;
                 font-family: $linkFontFamily;
         }

@@ -12,8 +12,8 @@ class Orders extends Component {
         console.log('orders', this.props.orders)
         return (
             <div className="orders-app" >
-                <h2>These Are Your Orders!</h2>
-                <h3>Details Shown Below</h3>
+                <h2 className='title' >These Are Your Orders!</h2>
+                <h3 className='sub' >Details Shown Below</h3>
 
                 <div className='orders-map' >
                     {this.props.orders.map((products, i) => {

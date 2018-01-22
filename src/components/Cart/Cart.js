@@ -21,8 +21,8 @@ class Cart extends Component {
         console.log('cart', this.props.cart); //no touchy
         return (
             <div className="cart-app" >
-                <h2>Welcome To Your Cart!</h2>
-                <h3>Let's see what you want</h3>
+                <h2 className='title'  >Welcome To Your Cart!</h2>
+                <h3 className='sub' >Let's see what you want</h3>
 
                 <div className="cart-map" >
                     {this.props.cart.map((products, i) => {

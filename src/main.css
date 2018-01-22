@@ -55,26 +55,26 @@ a:visited {
   text-decoration: none; }
 
 .App {
-  background-color: #788F82; }
+  background-color: #F4F4F4;
+  height: 100%; }
 
 .cart-app {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin-top: 10px; }
-  .cart-app h2 {
+  .cart-app .title {
     font-family: "Montserrat", sans-serif;
-    color: white;
+    color: #e24e42;
     font-size: 32px;
-    border-bottom: solid 5px black;
+    border-bottom: solid 5px #E9B000;
     width: 75%;
-    display: flex;
-    flex-flow: row;
+    padding-left: 15%;
     padding-top: 3px;
     padding-bottom: 3px; }
-  .cart-app h3 {
+  .cart-app .sub {
     font-family: "Nunito", sans-serif;
-    color: #8E372C;
+    color: #333;
     font-size: 22px;
     display: flex;
     flex-flow: row;
@@ -86,37 +86,38 @@ a:visited {
     flex-direction: column;
     align-items: center;
     margin: 10px; }
+    .cart-app .cart-map .product:hover {
+      box-shadow: 0 12px 30px 0 rgba(39, 32, 32, 0.479); }
     .cart-app .cart-map .product {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      border: solid #3D0016;
-      border-width: 7px;
       height: 220px;
       width: 90%;
-      margin: 5px;
-      background-color: #BA8480;
+      margin: 7px;
+      background-color: #008F95;
       font-family: "Nunito Sans", sans-serif;
       font-size: 30px;
       color: white;
       padding-top: 5px;
       padding-bottom: 5px;
-      border-radius: 7px; }
+      border-radius: 7px;
+      box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.25); }
       .cart-app .cart-map .product .product-image {
         height: 200px;
         width: 200px;
-        border: solid #039292;
-        border-radius: 10px;
+        border: solid 5px #EB6E80;
         border-width: 5px;
+        border-radius: 10px;
         box-shadow: 0 20px 32px 0 rgba(0, 0, 0, 0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.26); }
       .cart-app .cart-map .product .prod-button {
         height: 90px;
         font-size: 20px;
         font-family: "Dosis", sans-serif;
-        background-color: #32402f;
-        color: #F0DBCC;
-        border: solid 5px #4f0000;
+        background-color: white;
+        color: #E24E42;
+        border: solid 5px rgba(226, 79, 66, 0.89);
         border-radius: 7px; }
   .cart-app .order-button {
     margin: auto;
@@ -127,11 +128,12 @@ a:visited {
       width: 200px;
       font-family: "Dosis", sans-serif;
       font-size: 30px;
-      border: solid #32402f;
+      border: solid rgba(233, 175, 0, 0.76);
       border-radius: 7px;
       border-width: 7px;
-      background-color: #FFD1CF;
-      color: #4f0000; }
+      background-color: white;
+      color: #E9B000;
+      box-shadow: 3px 5px 0 0 rgba(58, 56, 56, 0.541); }
 
 .header {
   position: sticky;
@@ -150,14 +152,16 @@ a:visited {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    color: #718b7c;
-    font-size: 30px;
     margin: 5px; }
     .header .title .icon {
       border-radius: 7px;
       margin-right: 3px;
       height: 50px;
       width: 50px; }
+    .header .title .app-title {
+      margin-left: 5px;
+      color: #008F95;
+      font-size: 30px; }
   .header .navbar {
     width: 50%;
     display: flex;
@@ -165,11 +169,11 @@ a:visited {
     justify-content: flex-end;
     align-items: flex-end; }
     .header .navbar .Links {
-      border: solid #3D0016;
+      border: solid 5px #E24E42;
       border-radius: 12px;
       padding: 5px;
       width: 100px;
-      background-color: #BA8480;
+      background-color: #EB6E80;
       margin-left: 5px;
       margin-right: 5px; }
       .header .navbar .Links .pages {
@@ -182,22 +186,19 @@ a:visited {
 .orders-app {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   margin-top: 10px; }
-  .orders-app h2 {
+  .orders-app .title {
     font-family: "Montserrat", sans-serif;
-    color: white;
+    color: #e24e42;
     font-size: 32px;
-    border-bottom: solid 5px black;
+    border-bottom: solid 5px #E9B000;
     width: 75%;
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
+    padding-left: 15%;
     padding-top: 3px;
     padding-bottom: 3px; }
-  .orders-app h3 {
+  .orders-app .sub {
     font-family: "Nunito", sans-serif;
-    color: #8E372C;
+    color: #333;
     font-size: 22px;
     display: flex;
     flex-flow: row;
@@ -214,12 +215,12 @@ a:visited {
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      border: solid 10px #32402f;
+      border: solid #008F95;
       border-width: 7px;
       height: 220px;
       width: 90%;
-      margin: 5px;
-      background-color: #BA8480;
+      margin: 7px;
+      background-color: #008F95;
       font-family: "Nunito Sans", sans-serif;
       font-size: 30px;
       color: white;
@@ -229,7 +230,7 @@ a:visited {
       .orders-app .orders-map .product .product-image {
         height: 200px;
         width: 200px;
-        border: solid #F0DBCC;
+        border: solid 5px #EB6E80;
         border-radius: 10px;
         border-width: 5px;
         box-shadow: 0 20px 32px 0 rgba(0, 0, 0, 0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.26); }
@@ -239,61 +240,100 @@ a:visited {
   flex-direction: column;
   height: 3800px;
   margin-top: 10px; }
-  .product-app h2 {
+  .product-app .title {
     font-family: "Montserrat", sans-serif;
-    color: white;
+    color: #e24e42;
     font-size: 32px;
-    border-bottom: solid 5px black;
+    border-bottom: solid 5px #E9B000;
     width: 75%;
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
+    padding-left: 15%;
     padding-top: 3px;
     padding-bottom: 3px; }
-  .product-app h3 {
+  .product-app .sub {
     font-family: "Nunito", sans-serif;
-    color: #8E372C;
+    color: #333;
     font-size: 22px;
     display: flex;
     flex-flow: row;
     padding-left: 20%;
     padding-top: 5px;
     padding-bottom: 3px; }
-  .product-app .product-display {
+  .product-app .shop {
     display: flex;
-    flex-direction: row;
+    flex-flow: column;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin: 10px; }
-    .product-app .product-display .product {
+    align-content: stretch; }
+    .product-app .shop .product-display {
+      width: 70%;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      border: solid #3D0016;
-      border-width: 7px;
-      height: 700px;
-      width: 500px;
-      margin: 5px;
-      background-color: #BA8480;
-      font-family: "Nunito Sans", sans-serif;
-      font-size: 30px;
-      color: white;
-      padding: 7px;
-      border-radius: 7px; }
-      .product-app .product-display .product .product-image {
-        height: 300px;
-        width: 300px;
-        border: solid #F0DBCC;
-        border-radius: 10px;
-        border-width: 5px;
-        box-shadow: 0 20px 32px 0 rgba(0, 0, 0, 0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.26); }
-      .product-app .product-display .product .prod-button {
-        height: 90px;
-        font-size: 20px;
-        font-family: "Dosis", sans-serif;
-        background-color: #32402f;
-        color: #F0DBCC;
-        border: solid 5px #4f0000;
-        border-radius: 7px; }
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: baseline;
+      margin: 10px; }
+      .product-app .shop .product-display .product:hover {
+        box-shadow: 0 20px 32px 0 rgba(39, 32, 32, 0.479); }
+      .product-app .shop .product-display .product {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 700px;
+        width: 450px;
+        margin-left: 7px;
+        margin-top: 7px;
+        margin-bottom: 15px;
+        margin-right: 15px;
+        background-color: #008F95;
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 30px;
+        color: white;
+        padding: 7px;
+        border-radius: 7px;
+        box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.26); }
+        .product-app .shop .product-display .product .product-image {
+          height: 300px;
+          width: 300px;
+          border: solid 5px #EB6E80;
+          border-radius: 10px;
+          box-shadow: 0 20px 32px 0 rgba(0, 0, 0, 0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.26); }
+        .product-app .shop .product-display .product .prod-button {
+          height: 90px;
+          font-size: 20px;
+          font-family: "Dosis", sans-serif;
+          background-color: white;
+          color: #E24E42;
+          border: solid 5px rgba(226, 79, 66, 0.89);
+          border-radius: 7px; }
+    .product-app .shop .about {
+      position: sticky;
+      top: 25%;
+      right: 50px;
+      margin-left: 30px;
+      width: 230px;
+      height: 300px;
+      border-left: solid 5px #9c9696;
+      border-bottom: solid 5px #9c9696;
+      padding-left: 10px;
+      padding-right: 10px; }
+      .product-app .shop .about .abt-shop {
+        position: relative;
+        left: 0px;
+        top: 10%;
+        text-align: left;
+        font-size: 25px;
+        font-family: "Inconsolata", monospace;
+        color: #008F95; }
+      .product-app .shop .about .join {
+        position: relative;
+        top: 15%;
+        padding-bottom: 3px;
+        font-family: "Nunito", sans-serif;
+        font-size: 18px;
+        color: #E24E42; }
+      .product-app .shop .about .descript {
+        text-align: justify;
+        position: absolute;
+        bottom: 25%;
+        padding-top: 5px;
+        color: #333;
+        font-size: 18px; }
