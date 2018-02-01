@@ -9,6 +9,7 @@ FROM products
 INNER JOIN cart
 ON products.productid = cart.productsid;
 
+Adding to cart:
 INSERT INTO cart(productsid, cartid)
 VALUES(8, 1);
 
@@ -26,12 +27,8 @@ INNER JOIN products
 ON cart.productsid = products.productid
 WHERE productid = $1
 
-or ? 
-INSERT INTO cart
-SELECT productid
-FROM products 
-WHERE productid = $1
 
+This one adds to cart front to back
 INSERT INTO cart(productsid)
 SELECT productid
 FROM products 
