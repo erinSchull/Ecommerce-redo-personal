@@ -43,7 +43,7 @@ class Cart extends Component {
                     })}
                 </div>
                 <div className= "order-button">
-                    <a href='/#/orders' >
+                    <a href='/orders' >
                         <button onClick={this.handleClick}>Submit order</button>
                     </a>
                 </div>

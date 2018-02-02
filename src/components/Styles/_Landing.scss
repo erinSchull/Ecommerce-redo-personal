@@ -1,0 +1,87 @@
+.landing-page{
+    height: 100vh;
+    background: $landingBackgroundImage;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 30px;
+    .landing-left{
+        width: 50%;
+        height: 50%;
+        .landing-title{
+            padding-top: 50px;
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 30px;
+            color: $landingTitleColor;
+        }
+        .landing-button{
+            position: relative;
+            left: 30%;
+            height: $productButtonHeight;
+            width: 300px;
+            font-size: $landingButtonFontSize;
+            font-family: $productButtonFontFamily;
+            background-color: $productButtonColor;
+            color: $landingButtonFontColor;
+            border: $linkBorder;
+            border-radius: $productButtonBorderRadius;
+        }
+    }
+    .landing-right{
+        height: 600px;
+        position: absolute;
+        right: 50px;
+        bottom: 5%;
+        display: flex;
+        flex-flow: column;
+            .landing-descript{
+                height: 20%;
+                position: relative;
+                right: 0px;
+                .descript-title{
+                    position: relative;
+                    bottom: 0px;
+                    right: 50px;
+                    font-size: 35px;
+                    text-align: right;
+                    color: $landingTitleColor;
+                }
+            }
+                .image-top{
+                    display: flex;
+                    flex-flow: row;
+                    justify-content: flex-end;
+                    width: 95%;
+                    height: 45%;
+                    padding-right: 20px;
+                    .sample-products{
+                        margin-bottom: 20px;
+                        width: 200px;
+                        margin-right: 25px;
+                        height: 200px;
+                        border: $productImageBorder;
+                        border-radius: $productImageBorderRadius;
+                }
+            }
+        
+            .image-bottom{
+                display: flex;
+                flex-flow: row;
+                justify-content: flex-end;
+                width: 95%;
+                height: 45%;
+                margin-bottom: 20px;
+                padding-right: 20px;
+                .sample-products{
+                    margin-bottom: 10px;
+                    width: 200px;
+                    margin-right: 25px;
+                    height: 200px;
+                    border: $productImageBorder;
+                    border-radius: $productImageBorderRadius;
+                }
+            }
+    }
+}

@@ -8,10 +8,12 @@ class Header extends Component {
         return (
             <div className="header" >
                 <div className="title">
-                    <img src={drSeussIcon} alt='Dr. Seuss Hat' className='icon' />
-                    <h1 className='app-title' >Dr. Suess' Shop of Wonderful Extravaganza!</h1>
+                    <a className='title-link' href='/' >
+                        <img src={drSeussIcon} alt='Dr. Seuss Hat' className='icon' />
+                        <h1 className='app-title' >Dr. Suess' Shop of Wonderful Extravaganza!</h1>
+                    </a>
                 </div>
-                <div className= "navbar">
+                <div className="navbar">
                     <Link className='Links' to='/' >
                         <p className='pages'>Shop</p>
                     </Link>

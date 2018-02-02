@@ -153,6 +153,10 @@ a:visited {
     flex-direction: row;
     align-items: flex-end;
     margin: 5px; }
+    .header .title .title-link {
+      width: 100%;
+      display: flex;
+      flex-flow: row; }
     .header .title .icon {
       border-radius: 7px;
       margin-right: 3px;
@@ -161,7 +165,8 @@ a:visited {
     .header .title .app-title {
       margin-left: 5px;
       color: #008F95;
-      font-size: 30px; }
+      font-size: 30px;
+      margin-top: 10px; }
   .header .navbar {
     width: 50%;
     display: flex;
@@ -337,3 +342,79 @@ a:visited {
         padding-top: 5px;
         color: #333;
         font-size: 18px; }
+
+.landing-page {
+  height: 100vh;
+  background: url("./images/landing2.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 30px; }
+  .landing-page .landing-left {
+    width: 50%;
+    height: 50%; }
+    .landing-page .landing-left .landing-title {
+      padding-top: 50px;
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 30px;
+      color: #333; }
+    .landing-page .landing-left .landing-button {
+      position: relative;
+      left: 30%;
+      height: 90px;
+      width: 300px;
+      font-size: 30px;
+      font-family: "Dosis", sans-serif;
+      background-color: white;
+      color: #EB6E80;
+      border: solid 5px #E24E42;
+      border-radius: 7px; }
+  .landing-page .landing-right {
+    height: 600px;
+    position: absolute;
+    right: 50px;
+    bottom: 5%;
+    display: flex;
+    flex-flow: column; }
+    .landing-page .landing-right .landing-descript {
+      height: 20%;
+      position: relative;
+      right: 0px; }
+      .landing-page .landing-right .landing-descript .descript-title {
+        position: relative;
+        bottom: 0px;
+        right: 50px;
+        font-size: 35px;
+        text-align: right;
+        color: #333; }
+    .landing-page .landing-right .image-top {
+      display: flex;
+      flex-flow: row;
+      justify-content: flex-end;
+      width: 95%;
+      height: 45%;
+      padding-right: 20px; }
+      .landing-page .landing-right .image-top .sample-products {
+        margin-bottom: 20px;
+        width: 200px;
+        margin-right: 25px;
+        height: 200px;
+        border: solid 5px #EB6E80;
+        border-radius: 10px; }
+    .landing-page .landing-right .image-bottom {
+      display: flex;
+      flex-flow: row;
+      justify-content: flex-end;
+      width: 95%;
+      height: 45%;
+      margin-bottom: 20px;
+      padding-right: 20px; }
+      .landing-page .landing-right .image-bottom .sample-products {
+        margin-bottom: 10px;
+        width: 200px;
+        margin-right: 25px;
+        height: 200px;
+        border: solid 5px #EB6E80;
+        border-radius: 10px; }

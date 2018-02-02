@@ -16,6 +16,11 @@
         flex-direction: row;
         align-items: flex-end;
         margin: 5px;
+        .title-link{
+            width: 100%;
+            display: flex;
+            flex-flow: row;
+        }
         .icon{
             border-radius: 7px;
             margin-right: 3px;
@@ -26,6 +31,7 @@
             margin-left: 5px;
             color: $titleColor;
             font-size: 30px;
+            margin-top: 10px;
         }
     }
     .navbar {
