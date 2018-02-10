@@ -12,7 +12,8 @@
         .landing-title{
             padding-top: 50px;
             text-align: center;
-            font-size: 40px;
+            font-size: 45px;
+            font-family: $landingTitleFont;
             margin-bottom: 30px;
             color: $landingTitleColor;
         }
@@ -45,6 +46,7 @@
                     bottom: 0px;
                     right: 50px;
                     font-size: 35px;
+                    font-family: $landingTitleFont;
                     text-align: right;
                     color: $landingRightTextColor;
                 }

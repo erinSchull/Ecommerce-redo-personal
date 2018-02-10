@@ -15,6 +15,7 @@
         display: flex;
         flex-direction: row;
         align-items: flex-end;
+        font-family: $componentTitleFontFamily;
         margin: 5px;
         .title-link{
             width: 100%;

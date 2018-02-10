@@ -6,7 +6,7 @@
         .title{
         font-family: $componentTitleFontFamily;
         color: $componentTitleFontColor;
-        font-size: 32px;
+        font-size: 40px;
         border-bottom: $pageTitleBorder;
         width: 75%;
         padding-left: 15%;
@@ -110,7 +110,7 @@
                 position: absolute;
                 bottom: 25%;
                 padding-top: 5px;
-                color: #333;
+                color: rgb(49, 17, 71);
                 font-size: 18px;
             }
         }

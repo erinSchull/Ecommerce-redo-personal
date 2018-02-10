@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css?family=Inconsolata");
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 @import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css?family=Patrick+Hand");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -64,9 +65,9 @@ a:visited {
   flex-wrap: wrap;
   margin-top: 10px; }
   .cart-app .title {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Patrick Hand", cursive;
     color: #e24e42;
-    font-size: 32px;
+    font-size: 40px;
     border-bottom: solid 5px #311147;
     width: 75%;
     padding-left: 15%;
@@ -152,6 +153,7 @@ a:visited {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    font-family: "Patrick Hand", cursive;
     margin: 5px; }
     .header .title .title-link {
       width: 100%;
@@ -193,9 +195,9 @@ a:visited {
   flex-direction: column;
   margin-top: 10px; }
   .orders-app .title {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Patrick Hand", cursive;
     color: #e24e42;
-    font-size: 32px;
+    font-size: 40px;
     border-bottom: solid 5px #311147;
     width: 75%;
     padding-left: 15%;
@@ -246,9 +248,9 @@ a:visited {
   height: 3800px;
   margin-top: 10px; }
   .product-app .title {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Patrick Hand", cursive;
     color: #e24e42;
-    font-size: 32px;
+    font-size: 40px;
     border-bottom: solid 5px #311147;
     width: 75%;
     padding-left: 15%;
@@ -340,7 +342,7 @@ a:visited {
         position: absolute;
         bottom: 25%;
         padding-top: 5px;
-        color: #333;
+        color: #311147;
         font-size: 18px; }
 
 .landing-page {
@@ -357,7 +359,8 @@ a:visited {
     .landing-page .landing-left .landing-title {
       padding-top: 50px;
       text-align: center;
-      font-size: 40px;
+      font-size: 45px;
+      font-family: "Patrick Hand", cursive;
       margin-bottom: 30px;
       color: #F4F4F4; }
     .landing-page .landing-left .landing-button {
@@ -387,6 +390,7 @@ a:visited {
         bottom: 0px;
         right: 50px;
         font-size: 35px;
+        font-family: "Patrick Hand", cursive;
         text-align: right;
         color: #311147; }
     .landing-page .landing-right .image-top {

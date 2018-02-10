@@ -6,6 +6,8 @@
 //new ^
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 //new ^
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand');
+// new ^
 
 // products Variables
 $productImageHeight: 300px;
@@ -65,7 +67,7 @@ $titleColor: #008F95;
 //components Variables
 $appBackgroundColor: #F4F4F4;
 $componentTitleFontColor: #e24e42;
-$componentTitleFontFamily: 'Montserrat', sans-serif;
+$componentTitleFontFamily: 'Patrick Hand', cursive;
 $componentSubtitleFontFamily: 'Nunito', sans-serif;
 $componentSubtitleFontColor: #333;
 $pageTitleBorder: solid 5px rgb(49, 17, 71);
@@ -81,6 +83,7 @@ $landingRightTextColor: rgb(49, 17, 71);
 $landingButtonBorder: solid 5px #EB6E80;
 $landingButtonFontColor: #EB6E80;
 $landingButtonFontSize: 30px;
+$landingTitleFont: 'Patrick Hand', cursive;
 
 
 //shadows

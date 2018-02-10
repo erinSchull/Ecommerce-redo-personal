@@ -10,7 +10,7 @@ class Landing extends Component {
         return (
             <main className='landing-page' >
                 <div className='landing-left' >
-                    <h1 className='landing-title' >Welcome to<br /> the Dr. Seuss' Wondrous Shop</h1>
+                    <h1 className='landing-title' >Welcome to the<br /> Dr. Seuss' Wondrous Shop</h1>
                     <a href='/shop'><button className='landing-button'> Take me to the Shop</button></a>
                 </div>
                 <div className='landing-right' >
