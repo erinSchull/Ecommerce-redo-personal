@@ -39,8 +39,8 @@ $aboutJoinFontColor: #E24E42;
 
 //cart Variables
 $checkoutButtonColor: white;
-$checkoutButtonFontColor: #E9B000;
-$checkoutButtonBorder: solid rgba(233, 175, 0, 0.76);
+$checkoutButtonFontColor: rgb(60, 19, 87);
+$checkoutButtonBorder: solid rgb(49, 17, 71);
 $checkoutButtonBorderWidth: 7px;
 $cartFontColor: #F0DBCC;
 $cartDisplayHeight: 220px;
@@ -51,12 +51,12 @@ $cartImageBorder: solid rgb(3, 146, 146);
 $cartProductMargin: 7px;
 
 //header Variables
-$headerBorder: solid rgb(3, 146, 146);
-$headerBackgroundColor: #F0DBCC;
+$headerBorder: solid rgb(18, 163, 163);
+$headerBackgroundColor: rgb(195, 231, 245);
 $linkFontSize: 20px;
 $linkFontColor: #F4F4F4;
 $linkBackgroundColor: #EB6E80;
-$linkBorder: solid 5px #E24E42;
+$linkBorder: solid 5px rgb(230, 92, 112);
 $linkBorderRadius: 12px;
 $linkWidth: 100px;
 $linkFontFamily: 'Inconsolata', monospace;
@@ -68,7 +68,7 @@ $componentTitleFontColor: #e24e42;
 $componentTitleFontFamily: 'Montserrat', sans-serif;
 $componentSubtitleFontFamily: 'Nunito', sans-serif;
 $componentSubtitleFontColor: #333;
-$pageTitleBorder: solid 5px #E9B000;
+$pageTitleBorder: solid 5px rgb(49, 17, 71);
 $mapMargin: 10px;
 $pageTopMargin: 10px;
 

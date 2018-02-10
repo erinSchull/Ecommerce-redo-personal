@@ -14,7 +14,7 @@ class Header extends Component {
                     </a>
                 </div>
                 <div className="navbar">
-                    <Link className='Links' to='/' >
+                    <Link className='Links' to='/shop' >
                         <p className='pages'>Shop</p>
                     </Link>
                     <Link className='Links' to='/cart' >
