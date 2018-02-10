@@ -345,7 +345,7 @@ a:visited {
 
 .landing-page {
   height: 100vh;
-  background: url("./images/landing2.jpg") no-repeat center center fixed;
+  background: url("./images/landingleft.jpeg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -359,7 +359,7 @@ a:visited {
       text-align: center;
       font-size: 40px;
       margin-bottom: 30px;
-      color: #333; }
+      color: black; }
     .landing-page .landing-left .landing-button {
       position: relative;
       left: 30%;
@@ -388,7 +388,7 @@ a:visited {
         right: 50px;
         font-size: 35px;
         text-align: right;
-        color: #333; }
+        color: black; }
     .landing-page .landing-right .image-top {
       display: flex;
       flex-flow: row;

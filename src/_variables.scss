@@ -73,9 +73,10 @@ $mapMargin: 10px;
 $pageTopMargin: 10px;
 
 //landing Variables
-$landingBackgroundImage: url('./images/landing2.jpg') no-repeat center center fixed;  
+$landingBackgroundImage: url('./images/landing2.jpg') no-repeat center center fixed;
+$landingLeftBackgroundImage: url('./images/landingleft.jpeg') no-repeat center center fixed;
 $landingBackgroundColor: #008F95;
-$landingTitleColor: #333;
+$landingTitleColor: black;
 $landingButtonBorder: solid 5px #EB6E80;
 $landingButtonFontColor: #EB6E80;
 $landingButtonFontSize: 30px;
