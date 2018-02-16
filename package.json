@@ -2,7 +2,7 @@
   "name": "group-ecommerce",
   "version": "0.1.0",
   "private": true,
-  "main": "./server/server.js",
+  "main": "server/server.js",
   "proxy": "http://localhost:8000",
   "dependencies": {
     "axios": "^0.17.0",

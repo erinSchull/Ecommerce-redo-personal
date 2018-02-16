@@ -2,8 +2,8 @@ require('dotenv').config();
 
 const express = require('express')
     , bodyParser = require('body-parser')
-    , massive = require('massive');
-
+    , massive = require('massive')
+    , path = require('path');
 
 const prodCtrl = require('./controllers/product_controller');
 const cartCtrl = require('./controllers/cart_controller');
@@ -11,7 +11,9 @@ const orderCtrl = require('./controllers/orders_controller');
 
 
 const app = express();
-
+// put app.use at the top
+// express static for hosting
+app.use( express.static( `${__dirname}/../build` ) );
 app.use(bodyParser.json());
 
 massive(process.env.CONNECTION_STRING).then( db => {
@@ -39,7 +41,10 @@ app.put('/api/cart', cartCtrl.clearCart);
 app.get('/api/orders', orderCtrl.getProductsOnOrders);
 app.post('/api/orders', orderCtrl.createOrderOnCart);
 
-// this is for hosting!
-app.use( express.static( './../build' ) );
+// this is because I use browser router
+app.use('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '/../build/index.html'));
+})
+
 const PORT = 8000;
 app.listen(PORT, () => console.log(`Listening on port ${PORT} `))
