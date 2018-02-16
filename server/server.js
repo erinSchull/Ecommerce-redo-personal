@@ -41,5 +41,5 @@ app.post('/api/orders', orderCtrl.createOrderOnCart);
 
 // this is for hosting!
 app.use( express.static( './../build' ) );
-const PORT = 4000;
+const PORT = 8000;
 app.listen(PORT, () => console.log(`Listening on port ${PORT} `))
