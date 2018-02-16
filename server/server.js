@@ -40,6 +40,6 @@ app.get('/api/orders', orderCtrl.getProductsOnOrders);
 app.post('/api/orders', orderCtrl.createOrderOnCart);
 
 // this is for hosting!
-app.use( express.static( `${__dirname}/../build` ) );
+app.use( express.static( './../build' ) );
 const PORT = 4000;
 app.listen(PORT, () => console.log(`Listening on port ${PORT} `))
